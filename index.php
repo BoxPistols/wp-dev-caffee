@@ -255,7 +255,7 @@
       </div>
 
       <div class="footer__copyright">
-        <p class="text-center"><small>Copyright &copy; MaverickCoffee</small></p>
+        <p class="text-center"><small>Copyright &copy; coffee</small></p>
       </div>
 
     </footer>

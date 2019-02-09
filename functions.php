@@ -51,7 +51,7 @@ function coffee_scripts() {
   wp_enqueue_style( 'bootstrap-style', get_template_directory_uri().'/css/bootstrap-custom.css', array(), '1' );
 
   // サイト用CSSの読み込み
-  wp_enqueue_style( 'maverickcoffee-style', get_template_directory_uri().'/css/app.css', array(), '1' );
+  wp_enqueue_style( 'coffee-style', get_template_directory_uri().'/css/app.css', array(), '1' );
 
   // テーマ定義CSSの読み込み
   wp_enqueue_style( 'wp-style', get_stylesheet_uri(), array(), '1' );
@@ -64,7 +64,7 @@ function coffee_scripts() {
   wp_enqueue_script( 'bootstrap-script', get_template_directory_uri().'/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
 
   // サイト用JavaScriptの読み込み
-  wp_enqueue_script( 'maverickcoffee-script', get_template_directory_uri().'/js/app.js', array(), '1', true );
+  wp_enqueue_script( 'coffee-script', get_template_directory_uri().'/js/app.js', array(), '1', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'coffee_scripts' );
