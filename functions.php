@@ -5,7 +5,7 @@ if ( ! isset( $content_width ) ) {
   $content_width = 790;
 }
 
-function maverickcoffee_setup() {
+function coffee_setup() {
 
   // タイトルタグを自動生成します。
   add_theme_support( 'title-tag' );
@@ -28,10 +28,10 @@ function maverickcoffee_setup() {
   // エディタ用CSSを有効にします。
   add_editor_style( array( 'css/editor-style.css' ) );
 }
-add_action( 'after_setup_theme', 'maverickcoffee_setup' );
+add_action( 'after_setup_theme', 'coffee_setup' );
 
 // ウィジェット機能を追加します。
-function maverickcoffee_widgets_init() {
+function coffee_widgets_init() {
   register_sidebar( array(
     'name' => 'サイドバーウィジェットエリア',
     'id' => 'subcol-widget-area',
@@ -42,10 +42,10 @@ function maverickcoffee_widgets_init() {
     'after_title' => '</h2>',
   ) );
 }
-add_action( 'widgets_init', 'maverickcoffee_widgets_init' );
+add_action( 'widgets_init', 'coffee_widgets_init' );
 
 // 読み込むCSSとJavaScriptを設定します。
-function maverickcoffee_scripts() {
+function coffee_scripts() {
 
   // bootstrap CSSの読み込み
   wp_enqueue_style( 'bootstrap-style', get_template_directory_uri().'/css/bootstrap-custom.css', array(), '1' );
@@ -67,7 +67,7 @@ function maverickcoffee_scripts() {
   wp_enqueue_script( 'maverickcoffee-script', get_template_directory_uri().'/js/app.js', array(), '1', true );
 
 }
-add_action( 'wp_enqueue_scripts', 'maverickcoffee_scripts' );
+add_action( 'wp_enqueue_scripts', 'coffee_scripts' );
 
 // 抜粋文が自動的に生成される場合に最後に付与される文字列を変更します。
 function wp_excerpt_more() {
